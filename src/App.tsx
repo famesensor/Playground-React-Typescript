@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 
 import CustomHook from './pages/customHook';
+import UseStatePage from './pages/useStatePage';
 import UseEffectPage from './pages/useEffectPage';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -30,6 +31,11 @@ function App() {
                     <Grid item xs={6}>
                         <Paper className={classes.paper}>
                             <UseEffectPage />
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Paper className={classes.paper}>
+                            <UseStatePage initialCount={1} />
                         </Paper>
                     </Grid>
                     <Grid item xs={6}>
