@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 type Props = { initialCount: number };
 
-const UseStatePage = ({ initialCount }: Props) => {
+const UseStatePage: React.FC<Props> = ({ initialCount }: Props) => {
     const [count, setCount] = useState(initialCount);
 
     return (
