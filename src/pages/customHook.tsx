@@ -12,8 +12,12 @@ const CustomHook: React.FC = () => {
         `${process.env.REACT_APP_URL}pokemon?limit=10&offset=0`
     );
 
-    const listItems = data?.map((res) => {
-        return <li key={res.url}>{res.name}</li>;
+    const listItems = data?.map((res, item) => {
+        return (
+            <li key={item}>
+                {res.name}, {res.url}
+            </li>
+        );
     });
 
     return (
