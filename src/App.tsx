@@ -8,6 +8,8 @@ import CustomHook from './pages/customHook';
 import UseStatePage from './pages/useStatePage';
 import UseEffectPage from './pages/useEffectPage';
 import UseReducerPage from './pages/useReducerPage';
+import CountClassComponent from './pages/classComponent';
+import ThemeProvider from './context/theme-provider';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -31,6 +33,14 @@ function App() {
                 <Grid container spacing={4}>
                     <Grid item xs={6}>
                         <Paper className={classes.paper}>
+                            <CountClassComponent
+                                message='Class Component'
+                                initCount={15}
+                            />
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Paper className={classes.paper}>
                             <UseEffectPage />
                         </Paper>
                     </Grid>
@@ -47,6 +57,11 @@ function App() {
                     <Grid item xs={6}>
                         <Paper className={classes.paper}>
                             <CustomHook />
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Paper className={classes.paper}>
+                            <ThemeProvider />
                         </Paper>
                     </Grid>
                 </Grid>
