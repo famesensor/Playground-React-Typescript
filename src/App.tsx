@@ -7,6 +7,7 @@ import Container from '@material-ui/core/Container';
 import CustomHook from './pages/customHook';
 import UseStatePage from './pages/useStatePage';
 import UseEffectPage from './pages/useEffectPage';
+import UseReducerPage from './pages/useReducerPage';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -36,6 +37,11 @@ function App() {
                     <Grid item xs={6}>
                         <Paper className={classes.paper}>
                             <UseStatePage initialCount={1} />
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Paper className={classes.paper}>
+                            <UseReducerPage count={10} />
                         </Paper>
                     </Grid>
                     <Grid item xs={6}>
