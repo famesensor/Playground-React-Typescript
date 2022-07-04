@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-type Props = { initialCount: number };
+type Props = { initialCount: number }
 
 const UseStatePage: React.FC<Props> = ({ initialCount }: Props) => {
-    const [count, setCount] = useState(initialCount);
+    const [count, setCount] = useState(initialCount)
 
     return (
         <div>
@@ -17,7 +17,7 @@ const UseStatePage: React.FC<Props> = ({ initialCount }: Props) => {
             </button>
             <button onClick={() => setCount(initialCount)}>Reset</button>
         </div>
-    );
-};
+    )
+}
 
-export default UseStatePage;
+export default UseStatePage

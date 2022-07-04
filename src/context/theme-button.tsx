@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
-import { ThemeContext, ThemeContextProps } from './theme-context';
+import React, { useContext } from 'react'
+import { ThemeContext, ThemeContextProps } from './theme-context'
 
 export const ToggleThemeButton: React.FC = () => {
-    const theme = useContext<ThemeContextProps>(ThemeContext);
+    const theme = useContext<ThemeContextProps>(ThemeContext)
 
     return (
         <button style={theme.theme} onClick={theme.toggleTheme}>
             Toggle Switch
         </button>
-    );
+    )
 
     // return (
     //     <ThemeContext.Consumer>
@@ -19,4 +19,4 @@ export const ToggleThemeButton: React.FC = () => {
     //         )}
     //     </ThemeContext.Consumer>
     // );
-};
+}

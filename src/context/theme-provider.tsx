@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { ThemeContext, ThemeContextProps, themes } from './theme-context';
-import { ToggleThemeButton } from './theme-button';
+import { useState } from 'react'
+import { ToggleThemeButton } from './theme-button'
+import { ThemeContext, ThemeContextProps, themes } from './theme-context'
 
 export default function ThemeProvider() {
     const [themeState, setTheme] = useState<ThemeContextProps>({
         theme: themes.dark
-    });
+    })
 
     const toggleTheme = () => {
         setTheme((s) => {
             return {
                 ...s,
                 theme: s.theme === themes.light ? themes.dark : themes.light
-            };
-        });
-    };
+            }
+        })
+    }
 
     return (
         <ThemeContext.Provider
@@ -25,5 +25,5 @@ export default function ThemeProvider() {
                 <ToggleThemeButton />
             </div>
         </ThemeContext.Provider>
-    );
+    )
 }

@@ -1,29 +1,29 @@
-import React from 'react';
+import React from 'react'
 
 interface State {
-    count: number;
+    count: number
 }
 
 type Action =
     | { type: 'reset'; payload: number }
     | { type: 'increment'; payload: number }
-    | { type: 'decrement'; payload: number };
+    | { type: 'decrement'; payload: number }
 
 const countReducer = (state: State, action: Action): State => {
     switch (action.type) {
         case 'increment':
-            return { ...state, count: state.count + action.payload };
+            return { ...state, count: state.count + action.payload }
         case 'decrement':
-            return { ...state, count: state.count - action.payload };
+            return { ...state, count: state.count - action.payload }
         case 'reset':
-            return { ...state, count: action.payload };
+            return { ...state, count: action.payload }
         default:
-            throw new Error();
+            throw new Error()
     }
-};
+}
 
 const UesReducerPage: React.FC<State> = ({ count }: State) => {
-    const [state, dispatch] = React.useReducer(countReducer, { count: count });
+    const [state, dispatch] = React.useReducer(countReducer, { count: count })
 
     return (
         <div>
@@ -39,7 +39,7 @@ const UesReducerPage: React.FC<State> = ({ count }: State) => {
                 Reset
             </button>
         </div>
-    );
-};
+    )
+}
 
-export default UesReducerPage;
+export default UesReducerPage

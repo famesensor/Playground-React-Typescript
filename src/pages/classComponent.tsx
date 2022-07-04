@@ -1,42 +1,41 @@
-import React from 'react';
-import { count } from 'yargs';
+import React from 'react'
 
 interface Props {
-    message: string;
-    initCount: number;
+    message: string
+    initCount: number
 }
 
 type MyState = {
-    count: number;
-};
+    count: number
+}
 
 class CountClassComponent extends React.Component<Props, MyState> {
     // state: MyState = {
     //     count: 15
     // };
 
-    state = { count: 0 };
+    state = { count: 0 }
 
     componentDidMount() {
-        this.setState({ count: this.props.initCount });
+        this.setState({ count: this.props.initCount })
     }
 
     increment = (amt: number) => {
         // like this
         this.setState((state) => ({
             count: state.count + amt
-        }));
-    };
+        }))
+    }
 
     decrement = (amt: number) => {
         this.setState((state) => ({
             count: state.count - amt
-        }));
-    };
+        }))
+    }
 
     reset = () => {
-        this.setState({ count: this.props.initCount });
-    };
+        this.setState({ count: this.props.initCount })
+    }
 
     render() {
         return (
@@ -47,8 +46,8 @@ class CountClassComponent extends React.Component<Props, MyState> {
                 <button onClick={() => this.decrement(1)}>Decrement</button>
                 <button onClick={() => this.reset()}>Reset</button>
             </div>
-        );
+        )
     }
 }
 
-export default CountClassComponent;
+export default CountClassComponent

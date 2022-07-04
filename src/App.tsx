@@ -1,15 +1,14 @@
-import React from 'react';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
+import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 
-import CustomHook from './pages/customHook';
-import UseStatePage from './pages/useStatePage';
-import UseEffectPage from './pages/useEffectPage';
-import UseReducerPage from './pages/useReducerPage';
-import CountClassComponent from './pages/classComponent';
-import ThemeProvider from './context/theme-provider';
+import ThemeProvider from './context/theme-provider'
+import CountClassComponent from './pages/classComponent'
+import CustomHook from './pages/customHook'
+import UseEffectPage from './pages/useEffectPage'
+import UseReducerPage from './pages/useReducerPage'
+import UseStatePage from './pages/useStatePage'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -22,10 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
             color: theme.palette.text.secondary
         }
     })
-);
+)
 
 function App() {
-    const classes = useStyles();
+    const classes = useStyles()
 
     return (
         <Container>
@@ -67,7 +66,7 @@ function App() {
                 </Grid>
             </div>
         </Container>
-    );
+    )
 }
 
-export default App;
+export default App
